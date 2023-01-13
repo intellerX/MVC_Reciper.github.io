@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row justify-content-center">
+
+    <div class="col-10">
+
+        <h1>Historico</h1>
+        <button type="button" class="btn btn-success btn-sm boton-nuevo-empleado">Nuevo</button>
+
+        <table class="table table-striped" id="tablaEmpleados">
+           <thead>
+               <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Dias</th>
+                    <th>Hora</th>
+
+                    <th>Fecha_Ingreso</th>
+                    <th>Celular</th>
+                    <th>Acudiente</th>
+                    <th>Clase</th>
+                    <th>Btns</th>
+
+               </tr>
+           </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+<!-- Modal Usuario -->
+<div class="modal fade" id="modalEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               
+                <div class="mb-3">
+                    <label  class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="txtNombreCompleto" autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="txtEdad">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Dias</label>
+                    <input type="text" class="form-control" id="txtDias"></input>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hora</label>
+                    <input type="text" class="form-control" id="txtHora"></input>
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Fecha Ingreso</label>
+                    <input type="text" class="form-control" id="txtFecha">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Celular</label>
+                    <input type="text" class="form-control" id="txtCelular"></input>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Acudiente</label>
+                    <input type="text" class="form-control" id="txtAcudiente"></input>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Clase</label>
+                    <input type="text" class="form-control" id="txtClase"></input>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary boton-guardar-cambios-empleado">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pago -->
+<div class="modal fade" id="modalPago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Pago</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <input type="text" class="form-control" autocomplete="off" id="txtDescripcion" autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Valor</label>
+                    <input type="number" class="form-control" autocomplete="off" id="txtValor">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Metodo Pago</label>
+                    <input type="text" class="form-control" autocomplete="off" id="txtMetodo">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Estudiante</label>
+                    <input type="text" class="form-control" autocomplete="off" id="txtEstudiante"></input>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Acudiente</label>
+                    <input type="text" class="form-control" autocomplete="off" id="txtAcudientePago"></input>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha</label>
+                    <input type="text" class="form-control" autocomplete="off" id="txtFechaPago">
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary boton-guardar-cambios-pago">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Historial -->
+
+
+<div class="modal fade" id="modalHistorial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Historial</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body historial" id="modal-historial">
+
+               
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary boton-guardar-cambios-pago">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+
+    <script src="~/js/index.js"></script>
+}
+
+
